@@ -1,0 +1,34 @@
+    <button class="btn float-end d-md-none sidebar-open" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+            role="button">
+        <i class="bi bi-list fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
+    </button>
+    <div class="main-container align-items-center">
+        <div class="main-content__title">Главная</div>
+        <div class="d-flex period-selection f-weight-500 flex-wrap">
+            <a id="today" href="/?period=today" class="btn btn-outline-secondary w-100-px">Сегодня</a>
+            <a id="week" href="/?period=week" class="btn btn-outline-secondary w-100-px">Неделя</a>
+            <a id="month" href="/?period=month" class="btn btn-outline-secondary w-100-px">Месяц</a>
+            <a id="year" href="/?period=year" class="btn btn-outline-secondary w-100-px">Год</a>
+            <a id="all" href="/?period=all" class="btn btn-outline-secondary w-100-px">Все</a>
+            <a id="interval" href="/?period=interval" class="btn btn-outline-secondary w-100-px">Интервал</a>
+            <div class="d-none flex-wrap interval align-items-center justify-content-center" id="interval-duration">
+                <div>
+                    с <span><input id="dateFrom" class="ms-1" type="date" disabled></span>
+                </div>
+                <div>
+                    по <span><input id="dateTo" class="ms-1" type="date" disabled></span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-wrap justify-content-around charts">
+            <div class="chart-container">
+                <div class="chart-title">Доходы <span id="total-incomes"></span></div>
+                <canvas id="incomes-chart"></canvas>
+            </div>
+            <div class="divider"></div>
+            <div class="chart-container expenses">
+                <div class="chart-title">Расходы <span id="total-expenses"></span></div>
+                <canvas id="expenses-chart"></canvas>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,49 @@
+<button class="btn float-end d-md-none sidebar-open" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+        role="button">
+    <i class="bi bi-list fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
+</button>
+<div class="main-container align-items-center">
+    <div class="main-content__title">Доходы и расходы</div>
+    <div class="balance-actions f-weight-500">
+        <a id="create-income" href="/balance/create?type=income" class="btn btn-success f-size-14 l-height-24 px-3">Создать
+            доход</a>
+        <a id="create-expense" href="/balance/create?type=expense" class="btn btn-danger ml-10 f-size-14 l-height-24 px-3">Создать
+            расход</a>
+    </div>
+    <div class="d-flex period-selection f-weight-500 flex-wrap">
+        <a id="today" href="/balance?period=today" class="btn btn-outline-secondary w-100-px">Сегодня</a>
+        <a id="week" href="/balance?period=week" class="btn btn-outline-secondary w-100-px">Неделя</a>
+        <a id="month" href="/balance?period=month" class="btn btn-outline-secondary w-100-px">Месяц</a>
+        <a id="year" href="/balance?period=year" class="btn btn-outline-secondary w-100-px">Год</a>
+        <a id="all" href="/balance?period=all" class="btn btn-outline-secondary w-100-px">Все</a>
+        <a id="interval" href="/balance?period=interval" class="btn btn-outline-secondary w-100-px">Интервал</a>
+        <div class="d-none flex-wrap interval align-items-center justify-content-center" id="interval-duration">
+            <div>
+                с <span><input id="dateFrom" class="ms-1" type="date" disabled></span>
+            </div>
+            <div>
+                по <span><input id="dateTo" class="ms-1" type="date" disabled></span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="table-responsive balance-table">
+    <table class="table text-center" id="balance-table">
+        <thead class="border-top">
+        <tr>
+            <th scope="col" class="text-">№ операции</th>
+            <th scope="col">Тип</th>
+            <th scope="col">Категория</th>
+            <th scope="col">Сумма</th>
+            <th scope="col">Дата</th>
+            <th scope="col">Комментарий</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody id="records">
+        </tbody>
+    </table>
+</div>
+

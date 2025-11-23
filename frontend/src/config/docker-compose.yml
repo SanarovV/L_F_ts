@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  web:
+    image:
+      nginx:latest
+    volumes:
+      - /home/user/lf:/usr/share/nginx/html
+      - /home/user/lf/nginx_conf:/etc/nginx/conf.d
+    ports:
+      - "8080:80"
+#    docker run -it --rm -d -p 8080:80 --name web -v ~/lf:/usr/share/nginx/html -v ~/lf/nginx_conf:/etc/nginx/conf.d nginx

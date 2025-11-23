@@ -1,0 +1,41 @@
+<button class="btn float-end d-md-none sidebar-open" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+        role="button">
+    <i class="bi bi-list fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
+</button>
+<div class="main-container align-items-center">
+    <div class="main-content__title">Создание дохода/расхода</div>
+    <div class="main-content__wrapper-element card-group d-flex flex-wrap p-0">
+        <form action="includes/balance.html">
+            <div class="category-add-and-edit border-0">
+                <div class="form-select-wrapper w-100">
+                    <select class="form-select" id="type" required>
+                        <option selected disabled hidden value="">Тип...</option>
+                        <option value="income">Доход</option>
+                        <option value="expense">Расход</option>
+                    </select>
+                    <span id="type-error" class="error invalid-feedback">Выберите тип операции</span>
+                </div>
+                <div class="form-select-wrapper w-100">
+                    <select class="form-select" id="category" required>
+                        <option selected disabled hidden value="">Категория...</option>
+                    </select>
+                    <span id="category-error" class="error invalid-feedback">Выберите категорию</span>
+                </div>
+                <div class="form-input-wrapper w-100">
+                    <input type="number" class="form-control" id="amount" placeholder="Сумма в $...">
+                    <span id="amount-error" class="error invalid-feedback">Введите сумму</span>
+                </div>
+                <div class="form-input-wrapper w-100">
+                    <input type="date" class="form-control" id="date" placeholder="Дата..." required>
+                    <span id="date-error" class="error invalid-feedback">Заполните поле</span>
+                </div>
+                <input type="text" class="form-control" id="commentary" placeholder="Комментарий...">
+                <div class="actions f-weight-500">
+                    <button id="proceed" class="btn btn-success f-size-14 l-height-24 px-3">Создать</button>
+                    <a id="cancel" href="/balance" type="button"
+                       class="btn btn-danger ml-10 f-size-14 l-height-24 px-3">Отмена</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,131 @@
+@media screen and (max-width: 1233px) {
+  .charts {
+    .divider {
+      display: none;
+    }
+    .chart-container.expenses {
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #D9D9D9;
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 1074px) {
+  .card-category {
+    min-width: 290px;
+    max-width: 290px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .vh-100 {
+    height: 100svh !important;
+  }
+  .card-category {
+    margin: 0 !important;
+  }
+
+  .main-content {
+    .main-container {
+      padding: 15px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .card-group {
+        gap: 15px;
+        justify-content: center;
+      }
+    }
+  }
+  .main-content {
+    &__title {
+      text-align: center;
+      padding-left: 40px;
+      padding-right: 40px;
+      font-size: 28px;
+    }
+  }
+
+  .charts {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .period-selection {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .balance-table {
+    padding-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .charts {
+    .chart-container {
+      max-width: 100%;
+    }
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  .category-add-and-edit {
+    min-width: unset;
+    max-width: unset;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .actions {
+      margin: 0 auto;
+    }
+
+    input {
+      text-align: center;
+    }
+  }
+  .card-category {
+    width: 100%;
+  }
+
+  .main-content {
+    .main-container {
+      padding: 15px;
+      margin: 0;
+    }
+  }
+}
+
+
+@media screen and (max-width: 326px) {
+  .main-content {
+    .card-body {
+      padding: 15px 5px 15px 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+
+        .btn {
+          margin: 0 !important;
+        }
+      }
+    }
+  }
+}
