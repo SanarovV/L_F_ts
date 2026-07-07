@@ -74,6 +74,7 @@ module.exports = {
                 {from: "./node_modules/chart.js/dist/chart.umd.js", to: "js"},
                 {from: "./src/config/docker-compose.yml", to: ""},
                 {from: "./src/config/default.conf", to: "nginx_conf"},
+                {from: "./src/static/_redirects", to: ""},
             ],
         }),
         new Dotenv(),
