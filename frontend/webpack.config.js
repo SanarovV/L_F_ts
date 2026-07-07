@@ -6,12 +6,12 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
     entry: './src/app.ts',
-    mode: 'development',
+    mode: 'production',
     devtool: 'inline-source-map',
     output: {
         filename: 'app.js',
         path: path.join(__dirname, 'dist'),
-        publicPath: '/',
+        publicPath: '',
         clean: true,
     },
     devServer: {
