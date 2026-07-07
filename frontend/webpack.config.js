@@ -11,7 +11,7 @@ module.exports = {
     output: {
         filename: 'app.js',
         path: path.join(__dirname, 'dist'),
-        publicPath: '',
+        publicPath: './',
         clean: true,
     },
     devServer: {
@@ -51,7 +51,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./index.html"
+            template: "./index.html",
+            inject: "body"
         }),
         new CopyPlugin({
             patterns: [
